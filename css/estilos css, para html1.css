@@ -1,43 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9cfd967e-bba3-4e4c-b206-8f3ed0105672/d4lkfnh-549fdf2c-6ef5-4892-b348-eb98b463126b.png/v1/fill/w_800,h_800,q_80,strp/textura_17_by_japeau_d4lkfnh-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD04MDAiLCJwYXRoIjoiXC9mXC85Y2ZkOTY3ZS1iYmEzLTRlNGMtYjIwNi04ZjNlZDAxMDU2NzJcL2Q0bGtmbmgtNTQ5ZmRmMmMtNmVmNS00ODkyLWIzNDgtZWI5OGI0NjMxMjZiLnBuZyIsIndpZHRoIjoiPD04MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.xywAdJhmmnY_u_v_PiF10lmLUs8KJSqehdDWZbVj3Ls");
-    background-size: 800px 800px;
+    background-image: url('../img/Backgroundjpg\ \(1\).jpg');
+    background-size: auto 100vh;
     height: 100vh;
     font-family: harrington;
-    
+    font-size: 10px;
+}
+
+/* se a tela tiver pelo menos 400 px carrega */
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
   }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
   
-  .menu { 
+.menu { 
     background-color: #999999;
-  \\isso chama somente o menu
-  }
-  
-  .menu ul {
+   /*isso chama somente o menu*/
+    position: fixed;
+    width: 100vw;
+    top: 0;
+
+}
+
+.menu ul {
     display: flex;
     justify-content: space-around;
-  }
+}
     
-  .menu li {
+.menu li {
     list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
   }
-  
-  a {
+
+a {
     color: purple;
     text-decoration: none;
-  \\identificador todos do grupo sao alterados
-  }
+  /*identificador todos do grupo sao alterados*/
+}
   
-  a:hover{
+a:hover{
     text-decoration: underline;
-  \\isso é um pseudoseletor
-  }
+  /*isso é um pseudoseletor*/
+}
   
-  .site-subtitle,
-  .site-title {
+.site-subtitle,
+.site-title {
     text-align: center;
     color: whitesmoke;
-  }
+}
+
+.site-title {
+  font-size: 4em;
+}
+
+.Portfolio {
+    color: whitesmoke;
+}
   
-  .site-subtitle {
+.site-subtitle {
     font-style: italic;
-    
-  }
+}
+  
+.img-portfolio {
+    height: 180px;
+    width: 180px;
+}
