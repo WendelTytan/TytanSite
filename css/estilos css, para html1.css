@@ -31,6 +31,21 @@ header {
   align-items: center;
 }
 
+.titulo {
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+  animation: linear 2s animacaotitulo forwards;
+}
+
+@keyframes animacaotitulo{
+  /*0:{
+
+  }*/
+  100% { transform: scale(1) translateY(0);
+       opacity: 1;
+    
+  }
+}
   
 .menu { 
     background-color: #999999;
@@ -38,6 +53,7 @@ header {
     position: fixed;
     width: 100vw;
     top: 0;
+    z-index: 1;
 
 }
 
@@ -53,7 +69,13 @@ header {
 .menu a {
   display: block;
   padding: 10px 20px;
-  }
+  transition: background-color 2s, color 1s;
+}
+
+.menu a:hover {
+  background-color: purple;
+  color: #999999;
+}
 
 a {
     color: purple;
@@ -77,9 +99,10 @@ a:hover{
   font-family: 'Press Start 2P', cursive;
 }
 
+.Contato,
 .Portfolio {
   padding: 2em;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .Portfolio .grid {
@@ -106,6 +129,7 @@ a:hover{
   text-align: center;  
 }
 
+.contato h2,
 .Portfolio h2{
     color: whitesmoke;
     font-family: 'Press Start 2P', cursive;
@@ -121,8 +145,12 @@ a:hover{
 .img-portfolio {
     height: 180px;
     width: 240px;
-    /*object-fit: cover;
-    object-position: inherit;*/
+    object-fit: cover;
+    transition: transform 500ms;
+}
+
+.img-portfolio:hover {
+      transform: scale(1.2);
 }
 
 @media (min-width: 1200px) {
@@ -130,4 +158,26 @@ a:hover{
     height: 200px;
     width: 240px;
 }
+}
+
+.contato .icons{
+  text-align: center;
+}
+
+.contato a {
+  color: wheat;
+  font-size: 10em;
+  transition: text-shadow 500ms;
+}
+
+.contato a:active,
+.contato a:hover{
+  text-decoration: none;
+  text-shadow: 1px 2px 10px white;
+}
+
+.contato a:active {
+  text-decoration: none;
+  text-shadow: 1px 2px 10px black;
+  transition: text-shadow 500ms;
 }
