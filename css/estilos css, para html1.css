@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+/* fontes adicionais */
+/*     font-family: 'Press Start 2P', cursive;
+
+    font-family: 'Stardos Stencil', cursive; */
+
 body {
     background-image: url('../img/Backgroundjpg\ \(1\).jpg');
     background-size: auto 100vh;
@@ -69,17 +74,60 @@ a:hover{
 
 .site-title {
   font-size: 4em;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .Portfolio {
+  padding: 2em;
+  height: 100vh;
+}
+
+.Portfolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 540px) {
+  .Portfolio .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .Portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    justify-content: center;
+    align-content: center;
+    height: calc(100vh - 4em - 48px - 1.5em);
+  }
+}
+
+.Portfolio figure {
+  text-align: center;  
+}
+
+.Portfolio h2{
     color: whitesmoke;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 1.5em;
+
 }
   
 .site-subtitle {
     font-style: italic;
+    font-family: 'Stardos Stencil', cursive;
 }
   
 .img-portfolio {
     height: 180px;
-    width: 180px;
+    width: 240px;
+    /*object-fit: cover;
+    object-position: inherit;*/
+}
+
+@media (min-width: 1200px) {
+  .img-portfolio {
+    height: 200px;
+    width: 240px;
+}
 }
