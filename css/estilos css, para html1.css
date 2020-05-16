@@ -99,10 +99,42 @@ a:hover{
   font-family: 'Press Start 2P', cursive;
 }
 
+.sobre,
 .Contato,
 .Portfolio {
   padding: 2em;
   min-height: 100vh;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sobre p{
+  color: white;
+  margin-bottom: 1em;
+  text-indent: 1.5em;
+}
+
+.sobre .avatar {
+  margin-left: 1em;
+}
+
+.sobre .avatar img {
+    clip-path: polygon(100% 0%, 100% 70%, 50% 100%, 0 70%, 0 0, 50% 37%);
+}
+
+@media (min-width: 600px) {
+  .sobre .avatar img{
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+  }
+  .sobre .avatar {
+    float: right;
+  }
 }
 
 .Portfolio .grid {
@@ -129,6 +161,7 @@ a:hover{
   text-align: center;  
 }
 
+.sobre h2,
 .contato h2,
 .Portfolio h2{
     color: whitesmoke;
@@ -146,18 +179,59 @@ a:hover{
     height: 180px;
     width: 240px;
     object-fit: cover;
-    transition: transform 500ms;
-}
-
-.img-portfolio:hover {
-      transform: scale(1.2);
 }
 
 @media (min-width: 1200px) {
   .img-portfolio {
     height: 200px;
     width: 240px;
+  }
 }
+
+.flip-card {
+  height: 180px;
+  width: 240px;
+  perspective: 1000px;
+}
+
+@media (min-width: 1200px) {
+  .flip-card {
+  height: 200px;
+  width: 240px;
+  }
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 240px;
+}
+
+.card-back {
+  background-color: ivory;
+  height: 180px;
+  width: 240px;
+  transform: rotateY(180deg)
+}
+
+@media (min-width: 1200px) {
+  .card-back {
+    height: 200px;
+    width: 240px;
+  }
 }
 
 .contato .icons{
