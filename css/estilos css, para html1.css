@@ -15,6 +15,8 @@ body {
     height: 100vh;
     font-family: harrington;
     font-size: 10px;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
