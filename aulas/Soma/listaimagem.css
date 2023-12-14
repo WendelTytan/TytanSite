@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: gray;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.fade-in {
+    animation: fadeIn 2s;
+}
+
+img {
+    max-height: 40%;
+    max-width: 50%;
+}
+
+h1 {
+    font-size: 24px;
+    margin 20px 0;
+}
+
+form {
+    text-align: left;
+    max-width: 110px;
+    margin: 0 auto;
+}
+
+label, input, textarea, button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font: black;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity 1;
+    }
+}

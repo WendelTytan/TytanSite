@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mudança de Imagem</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #imagem {
+            width: 80%;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Escolha um momento do dia (dia, tarde, noite):</h1>
+    <input type="text" id="momento" placeholder="Digite 'dia', 'tarde' ou 'noite'" >
+    <br><br>
+    <img onmousemove="mudarImagem()" id="imagem" src="dia.png" alt="Paisagem de dia">
+    <img onmousemove="mudarImagem()" id="outraimagem" src="dia.png" alt="Paisagem de dia">
+    
+    <script>
+        class Carro{
+            constructor(marca){
+                this.marca = marca;
+            }
+        }
+        let segundoCarro  = new Carro("kamaro");
+        let primeiroCarro = new Carro("ferrari");
+
+
+
+
+
+var input = document.getElementById("momento").value;
+
+var imagem = document.getElementById("imagem");
+
+let array = ["noite.png", "tarde.png", "dia.png"];
+
+for (let index = 0; index < array.length; index++) {
+ imagem.src = array[index];
+    
+
+}
+// &&, || , !
+
+        function mudarImagem() {
+            let imagem = document.getElementById("imagem")
+            
+            if (input === "dia" ||input === "manhã" || input === "manha" ) {
+                this.src = "dia.png";
+                this.alt = "Paisagem de dia";
+            } else if (input === "tarde") {
+                imagem.src = "tarde.png";
+                imagem.alt = "Paisagem de tarde";
+            } else if (input === "noite") {
+                imagem.src = "noite.png";
+                imagem.alt = "Paisagem de noite";
+            }
+        }
+        let frutas = [1,2, 'manga'];
+        console.log(frutas[1]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equação Segundo Grau</title>
+</head>
+<body>
+    <h1>Equação Segundo Grau</h1>
+
+    <!-- Campos de entrada para os coeficientes da equação -->
+    <label for="valorA">Escreva Valor De A</label>
+    <input type="number" id="valorA">
+
+    <label for="valorB">Escreva Valor De B</label>
+    <input type="number" id="valorB">
+
+    <label for="valorC">Escreva Valor De C</label>
+    <input type="number" id="valorC">
+
+    <!-- Botão para acionar o cálculo quando clicado -->
+    <button onclick="calcularFormula()">Calcular</button>
+
+    <!-- Resultados serão exibidos aqui -->
+    <div id="resultadoDelta"></div>
+    <div id="resultadoRaizPositiva"></div>
+    <div id="resultadoRaizNegativa"></div>
+
+    <script>
+        // Função para calcular e exibir as raízes da equação do segundo grau
+        function calcularFormula() {
+            // Obtenção dos valores dos coeficientes A, B e C a partir dos campos de entrada
+            let valorAInput = document.getElementById("valorA");
+            let valorBInput = document.getElementById("valorB");
+            let valorCInput = document.getElementById("valorC");
+
+            // Obtenção dos elementos onde os resultados serão exibidos
+            let resultadoDeltaDiv = document.getElementById("resultadoDelta");
+            let resultadoRaizPositivaDiv = document.getElementById("resultadoRaizPositiva");
+            let resultadoRaizNegativaDiv = document.getElementById("resultadoRaizNegativa");
+
+            // Conversão dos valores dos coeficientes para números
+            let valorA = parseFloat(valorAInput.value);
+            let valorB = parseFloat(valorBInput.value);
+            let valorC = parseFloat(valorCInput.value);
+
+            // Cálculo do delta
+            let delta = ((valorB * valorB) - 4 * (valorA * valorC));
+
+            // Exibição do valor do delta
+            resultadoDeltaDiv.textContent = "Seu valor de Delta é: " + delta.toFixed(2);
+
+            // Verificação se as raízes são números reais (delta >= 0)
+            if (delta >= 0) {
+                // Cálculo e exibição das raízes
+                let raizQuadrada = Math.sqrt(delta);
+                let bhaskaraPositivo = (-valorB + raizQuadrada) / (2 * valorA);
+                let bhaskaraNegativo = (-valorB - raizQuadrada) / (2 * valorA);
+
+                // Exibição das raízes com duas casas decimais
+                resultadoRaizPositivaDiv.textContent = "X1 é igual a: " + bhaskaraPositivo.toFixed(2);
+                resultadoRaizNegativaDiv.textContent = "X2 é igual a: " + bhaskaraNegativo.toFixed(2);
+            } else {
+                // Exibição caso as raízes sejam números complexos
+                resultadoRaizPositivaDiv.textContent = "Nao há raizes, pois  Δ < 0.";
+                resultadoRaizNegativaDiv.textContent = "";
+            }
+        }
+    </script>
+</body>
+</html>
