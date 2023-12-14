@@ -12,12 +12,11 @@
 body {
     background-image: url('../img/Backgroundjpg\ \(1\).jpg');
     background-size: auto 100vh;
-    height: 100vh;
     font-family: harrington;
     font-size: 10px;
+    height: 100vh;
     background-size: cover;
     background-position: center;
-    
 }
 
 /* se a tela tiver pelo menos 400 px carrega */
@@ -221,7 +220,6 @@ a:hover{
   top: 0;
   left: 0;
   width: 240px;
-  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.5);
 }
 
 .card-back {
