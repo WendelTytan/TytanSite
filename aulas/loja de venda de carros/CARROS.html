@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carros</title>
+    <style>
+        body{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            text-align: center;
+        }
+    </style>
+    </head>
+<body>
+       
+    <h1>Locação de carros</h1>
+    <div id="cars">
+
+
+    </div>
+    <script>
+        let cars = [
+            {name: "Carro 1", image: "carro1.jpg", rentedImage: "carroalugado.png"},
+            {name: "Carro 2", image: "carro2.jpg", rentedImage: "carroalugado.png"},
+            {name: "Carro 3", image: "carro3.jpg", rentedImage: "carrovendido.png"},
+            {name: "Carro 4", image: "carro4.JPG", rentedImage: "carroroubado.png"},
+        ];
+        let carsDiv = document.getElementById("cars");
+
+        cars.forEach (function(car){
+            let carDiv = document.createElement("div");
+            carDiv.className = 'car';
+
+            let carName = document.createElement("h2");
+            carName.textContent = car.name;
+            carDiv.appendChild(carName);
+
+            let carImage = document.createElement("img");
+            carImage.src = car.image;
+            carDiv.appendChild(carImage);
+
+            let rentButton = document.createElement("button");
+            rentButton.textContent = "Alugar";
+            rentButton.onclick = function(){
+                this.parentNode.removeChild(this);
+                carImage.src = car.rentedImage;
+            }
+            carDiv.appendChild(rentButton);
+            carsDiv.appendChild(carDiv);
+
+        }
+
+        );
+
+
+
+
+    </script>
+</body>
+</html>
