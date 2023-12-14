@@ -1,0 +1,68 @@
+h1 {
+    color:red;
+}
+
+.primeira h1 {
+    color:lightblue;
+}
+.paragrafo p{
+    color:blue;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 2px 3% 5px 3em;
+}
+
+th, td {
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+thead {
+    background-color: gray;
+}
+
+tbody {
+    background-color: lightgray;
+}
+
+tr:hover {
+    background-color: white;
+}
+
+td:hover {
+    background-color: red;
+}
+
+.Classe_p1:hover {
+    background-color: orange;
+}
+
+.classe_1:hover {
+    background-color: cyan;
+    border: 5px solid black;
+}
+
+form{
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="submit"]{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor:pointer;
+}
+input[type="submit"]:hover{
+    background-color: red;
+}

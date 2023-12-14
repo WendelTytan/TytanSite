@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="estilo">
+        <h1>Cálculo Peso Ideal</h1>
+        <img src="emoji.jpg" alt="emoji">
+    </div>
+
+    <form>
+        <label>Altura:</label>
+        <input type="number" id="altura">
+
+        <label>Peso:</label>
+        <input type="number" id="peso">
+
+        <button onclick="imc()">Calcular</button>
+    </form>
+    <div id="resultado"></div>
+
+    <style>
+        h1{
+            font-size: 80px;
+        }
+
+        body{
+            font-family: Verdana, sans-serif;
+            text-align: center; /* Centraliza o que estiver dentro do body*/
+            background-color:bisque
+            
+        }
+        
+        .estilo{
+            background-color:burlywood
+        }
+
+        img{
+            width: 500px;
+            border-radius: 15px;
+        }
+
+        form{
+            text-align: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+    </style>
+
+
+    <script>
+ 
+
+
+        function imc(){
+        let Quilograma = parseFloat(document.getElementById("peso").value);
+        let Altura = parseFloat(document.getElementById("altura").value);
+        var resultado = document.getElementById('resultado');
+
+       if( Altura !== " " && Quilograma !== " "){
+
+        // Indice de Massa Corporal – IMC = Massa (kg) ÷ Altura (m)².
+       
+       let Calculadora = (Quilograma/parseFloat(Altura*Altura)).toLocaleString('pt-BR');
+        let classificacao = " ";
+      
+
+
+       if(Calculadora <= 18.9){
+        classificacao = "Magro";
+       }
+       else if(Calculadora => 18.9 || Calculadora <= 24.9){
+        classificacao = "Normal";
+       }
+       else if(Calculadora >= 25 || Calculadora <= 29.9){
+        classificacao = "Sobrepeso";
+       }
+       else if(Calculadora >= 30 || Calculadora <= 34.99){
+        console.log("obesidade grau I");
+       }
+       
+       resultado.textContent = "seu imc é" + Calculadora + " você está" + classificacao;
+
+       }else{
+        resultado.textContent = "Digite os campos";
+    }
+}
+       
+       
+
+
+
+
+        
+        
+
+        
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
