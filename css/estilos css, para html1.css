@@ -160,7 +160,9 @@ a:hover{
 }
 
 .Portfolio figure {
-  text-align: center;  
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.5);
 }
 
 .sobre h2,
