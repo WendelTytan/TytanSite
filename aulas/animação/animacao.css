@@ -1,0 +1,114 @@
+
+@keyframes animacao {
+    to {
+        width:100%;
+    }
+    from {
+        width:50%;
+    }
+}
+
+.elementodiv{
+        background-color: blue;
+}
+
+.elementodiv:hover{
+        animation-name: animacao;
+        animation-duration: 2s;
+}
+
+@keyframes animacao2 {
+    0% {
+        width:100%;
+    }
+    50% {
+        width:50%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.elementodiv2{
+        background-color: red;
+        animation-name: animacao2;
+        animation-duration: 2s;
+}
+
+@keyframes animacao_vermelho {
+    from {
+        background-color: black;
+    }
+    to {
+        background-color: red;
+    }
+}
+
+@keyframes animacao_amarelo {
+    from {
+        background-color: black;
+    }
+    to {
+        background-color: yellow;
+    }
+}
+
+@keyframes animacao_verde {
+    from {
+        background-color: black;
+    }
+    to {
+        background-color: green;
+    }
+}
+
+
+
+.caixa{
+        background-color: purple;
+        width: fit-content;
+}
+
+.sinal{
+    background-color: pink;
+    border-radius: 20px;
+    margin: 20px;
+    height: 30px;
+    width: 100px;
+}
+
+.vermelho{
+        animation-name: animacao_vermelho;
+        animation-duration: 2s;
+}
+
+.amarelo{
+        animation-name: animacao_amarelo;
+        animation-duration: 2s;
+        animation-delay: 2s;
+}
+
+.verde{
+        animation-name: animacao_verde;
+        animation-duration: 2s;
+        animation-delay: 4s;
+}
+
+
+.vermelho{
+        animation-name: animacao_vermelho;
+        animation-duration: 2s;
+        animation-delay: 6s;
+}
+
+.amarelo{
+        animation-name: animacao_amarelo;
+        animation-duration: 2s;
+        animation-delay: 8s;
+}
+
+.verde{
+        animation-name: animacao_verde;
+        animation-duration: 2s;
+        animation-delay: 10s;
+}
